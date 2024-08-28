@@ -1,17 +1,7 @@
 import json
 from getpass import getpass
 from cryptography.fernet import Fernet, InvalidToken
-# import main as mn
-
-import tkinter as tk
-
-root = tk.Tk()  # Create the main application window
-root.geometry("300x300")
-root.title("Password Manager")
-
-# Widgets that are part of the main window
-textf = tk.Entry(root)
-label = tk.Label(root, text="Enter Pass")
+import main as mn
 
 key_file_path = 'encryption_key.key'
 passwords_file_path = 'passwords.json'
@@ -66,41 +56,8 @@ def get_password(passwords, service):
         return None
 
 def main():
-    passwords = load_passwords()
-    master_password = get_master_password()
+    mn.main()
 
-    # For simplicity, let's assume the master password check is basic.
-    # In a real application, use a secure authentication mechanism.
-    if master_password == "1234":
-        while True:
-            print("\n1. Add/Update Password")
-            print("2. Get Password")
-            print("3. Exit")
-
-            choice = input("Enter your choice (1/2/3): ")
-
-            if choice == '1':
-                service = input("Enter the service: ")
-                username = input("Enter the username: ")
-                password = getpass("Enter the password: ")
-                add_password(passwords, service, username, password)
-            elif choice == '2':
-                service = input("Enter the service: ")
-                stored_password = get_password(passwords, service)
-                if stored_password:
-                    print(f"Username: {stored_password['username']}")
-                    print(f"Password: {stored_password['password']}")
-            elif choice == '3':
-                save_passwords(passwords)
-                save_key(key)
-                print("Password manager closed.")
-                break
-            else:
-                print("Invalid choice. Please enter 1, 2, or 3.")
-
-    else:
-        print("Incorrect master password. Exiting.")
 
 if __name__ == "__main__":
     main()
-    root.mainloop()

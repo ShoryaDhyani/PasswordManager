@@ -1,2 +1,3 @@
 .vscode*
 passwords.json
+_pycache_*

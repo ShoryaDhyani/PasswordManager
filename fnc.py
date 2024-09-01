@@ -1,5 +1,5 @@
 import tkinter as tk
-import func as ab
+import main as ab
 
 # File paths
 key_file_path = 'encryption_key.key'

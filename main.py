@@ -1,7 +1,7 @@
 import json
 from getpass import getpass
 from cryptography.fernet import Fernet, InvalidToken
-import fnc as mn
+import ui as mn
 
 key_file_path = 'encryption_key.key'
 passwords_file_path = 'passwords.json'

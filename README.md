@@ -37,6 +37,7 @@ Run the application using:
 ```bash
 python main.py
 ```
+or Run PasswordManager.exe file.
 
 ---
 

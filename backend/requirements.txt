@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+authlib
+itsdangerous
+boto3
+cryptography
+python-dotenv

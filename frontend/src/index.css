@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap");
+
+:root {
+  --bg: #f5f6f7;
+  --bg-alt: #eceff1;
+  --surface: #ffffff;
+  --border: #d6dbe0;
+  --text: #1f2933;
+  --muted: #52606d;
+  --primary: #334e68;
+  --on-primary: #f8fafc;
+  --danger: #b42318;
+  --radius: 8px;
+  --shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  --sans: "Public Sans", "Segoe UI", sans-serif;
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 20px;
+  --space-5: 28px;
+
+  font: 16px/1.5 var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 var(--space-2);
+}
+
+h1 {
+  font-size: clamp(24px, 3vw, 34px);
+}
+
+h2 {
+  font-size: 20px;
+}
+
+p {
+  margin: 0 0 var(--space-2);
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
